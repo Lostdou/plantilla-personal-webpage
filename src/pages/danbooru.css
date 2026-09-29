@@ -1,0 +1,16 @@
+@font-face {
+  font-family: MotoyaLMaru;
+  src: url(/assets/fonts/motoya-l-maru.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.message-box {
+  background: #d6d4bc;
+  background: linear-gradient(180deg, #d6d4bc80, #7dbda173 6%, #7dbda1 51%, #7dbda173 95%, #d6d4bc80);
+}
+
+.gradient-text-stroke {
+  filter: drop-shadow(1px 0 0 #000) drop-shadow(-1px 0 0 #000) drop-shadow(0 1px 0 #000) drop-shadow(0 -1px 0 #000);
+}

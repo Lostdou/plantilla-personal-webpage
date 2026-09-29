@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: "M04B";
+  --font-times: "Times New Roman";
+}
+
+@font-face {
+  font-family: M04B;
+  src: url(/assets/fonts/04b-08.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: MS PGothic, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--home-selection-bg, #4d57a1);
+  color: var(--home-selection-text, #fcfae2);
+  text-shadow: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-corner {
+  background: var(--scrollbar-color, var(--home-accent, gray));
+}
+::-webkit-scrollbar-track:vertical {
+  background: linear-gradient(90deg, #0000, #0000 20%);
+}
+::-webkit-scrollbar-thumb {
+  border: 1.5px solid var(--scrollbar-color, var(--home-accent, gray));
+  background-color: #0000;
+  border-radius: 1px;
+  box-shadow: inset 0 -1px 1px #0000, inset 0 1px 1px #0000;
+}
+.medialog-scroll::-webkit-scrollbar-thumb {
+  background-color: #0000;
+  border: 1.5px solid #596c66;
+  border-radius: 1px;
+  box-shadow: inset 0 -1px 1px #0000, inset 0 1px 1px #0000;
+}
+::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+}
+::-webkit-scrollbar-button:vertical:start:decrement {
+  display: block;
+}
+::-webkit-scrollbar-button:vertical {
+  height: 0.5px;
+}
+::-webkit-scrollbar-button:vertical:start:increment {
+  display: none;
+}
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+
+@utility border-inset-style {
+  border-style: inset;
+}
+
+@utility text-white-border {
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff, 0 0;
+}
+
+@utility text-black-border {
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000, 0 0;
+}
+
+@utility blue-stripe-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+    45deg,
+    var(--home-stripe-primary, #2c357c) 25%,
+    var(--home-stripe-secondary, #232c6e4b) 25%,
+    var(--home-stripe-secondary, #232c6e4b) 50%,
+    var(--home-stripe-primary, #2c357c) 50%,
+    var(--home-stripe-primary, #2c357c) 75%,
+    var(--home-stripe-secondary, #232c6e4b) 75%,
+    var(--home-stripe-secondary, #232c6e4b) 100%
+  );
+  background-repeat: repeat;
+  animation: 1s linear infinite barber;
+}
+
+@keyframes barber {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

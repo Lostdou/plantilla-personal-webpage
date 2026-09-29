@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+.medialog-gantt-year {
+  animation: medialog-gantt-year-in 0.22s ease-out both;
+}
+
+@keyframes medialog-gantt-year-in {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
